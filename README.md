@@ -215,3 +215,17 @@ Here's an example of a tag that will join the items of a collection:
             writer.Write(joined);
         }
     }
+
+### Raw JSON
+Sometimes you might want to push a JSON string stright to the compiler without having to manually build an object as a data source. Here is a simple example:
+
+    FormatCompiler compiler = new FormatCompiler();
+    Generator generator = compiler.Compile("Hi {{name}} {{surname}}. You are {{age}} years old");
+    object json = new JavaScriptSerializer().DeserializeObject("{\"name\" : \"John\", \"surname\" : \"Doe\"}");
+    html = generator.Render(json);
+    
+This should print:
+
+    Hi John Doe. You are years old
+    
+{{age}} is not defined, so it will be ommited. This is mainly why I forked the original repo: To be able to ignore errors when the key is undefined, instead of throwing errors.
