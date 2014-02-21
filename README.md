@@ -214,7 +214,7 @@ Here's an example of a tag that will join the items of a collection:
         }
     }
 
-### Raw JSON
+## Raw JSON
 Sometimes you might want to push a JSON string stright to the compiler without having to manually build an object as a data source. Here is a simple example:
 
     FormatCompiler compiler = new FormatCompiler();
