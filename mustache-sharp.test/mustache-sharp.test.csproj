@@ -47,9 +47,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\mustache-sharp\mustache-sharp.csproj">
+    <ProjectReference Include="..\mustache-sharp\sthe-mustache-sharp.csproj">
       <Project>{D71B378F-A4BA-4263-A4F0-07A49A0C528D}</Project>
-      <Name>mustache-sharp</Name>
+      <Name>sthe-mustache-sharp</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />

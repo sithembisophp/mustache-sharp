@@ -12,6 +12,11 @@ namespace Mustache.Test
     [TestClass]
     public class FormatCompilerTester
     {
+
+        static void Main() {
+            System.Console.Write("sdfdsfsd");
+        }
+
         #region Tagless Formats
 
         /// <summary>

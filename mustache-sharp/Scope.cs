@@ -90,8 +90,11 @@ namespace Mustache
             {
                 return value;
             }
-            string message = String.Format(CultureInfo.CurrentCulture, Resources.KeyNotFound, results.Member);
-            throw new KeyNotFoundException(message);
+            else {
+                return "";
+            }
+            //string message = String.Format(CultureInfo.CurrentCulture, Resources.KeyNotFound, results.Member);
+            //throw new KeyNotFoundException(message);
         }
 
         private object onKeyFound(string name, object value)
