@@ -115,6 +115,24 @@ Within a block of text, you may refer to a same top-level placeholder over and o
     
 Here, the `Customer.Address` property will be searched first for the placeholders. If a property cannot be found in the `Address` object, it will be searched for in the `Customer` object and on up.
 
+## The 'stripe' tag (odd / even)
+The stripe tag allows you to add stripes to your template using CSS. All it does is print out `odd` or `even` when used in the `#each` context. This is sutable for use as a class name like so:
+
+    <style>
+        .even {background-color: #FFF;}
+        .odd {background-color: #EEE;}
+    </style>
+    <table>
+    {{#each users}}
+        <tr class="{{#stripe}}">
+            <td>{{name}}</td>
+            <td>{{surname}}</td>
+        </tr>
+    {{/each}}
+    </table>
+
+This will make the background on all the odd rows light grey.
+
 ## The 'set' tag
 **mustache#** provides limited support for variables through use of the `set` tag. Once a variable is declared, it is visible to all child scopes. Multiple definitions of a variable with the same name cannot be created within the same scope. In fact, I highly recommend making variable names unique to the entire template just to prevent unexpected behavior!
 
