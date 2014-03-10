@@ -41,6 +41,8 @@ namespace Mustache
             _tagLookup.Add(newlineDefinition.Name, newlineDefinition);
             SetTagDefinition setDefinition = new SetTagDefinition();
             _tagLookup.Add(setDefinition.Name, setDefinition);
+            StripeTagDefinition stripeDefinition = new StripeTagDefinition();
+            _tagLookup.Add(stripeDefinition.Name, stripeDefinition);
         }
 
         /// <summary>
