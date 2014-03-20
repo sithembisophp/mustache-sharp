@@ -133,12 +133,28 @@ The stripe tag allows you to add stripes to your template using CSS. All it does
 
 This will make the background on all the odd rows light grey.
 
+## Current object reference
+The `this` property has been implemented to reference the current object in the iteration, in the `each` loop for example. Example:
+
+    {{#each rows}}
+        <tr>
+            {{#each this}} <!-- Refers to the current row in the iteration -->
+            <td>
+                <span>
+                    {{this}} <!-- Refers to the current element in the row -->
+                </span>
+            </td>
+            {{/each}}
+        </tr>
+    {{/each}}
+
+
 ## The 'counter' tag
 This is a simple tag that allows you to print out the iteration count starting from 1 as opposed to `{{#index}}` which starts at 0. This can be useful in reports where you want to show the number of items next to each record like so:
 
     <table>
         {{#each rows}}
-        <tr class="fontGrey tablecontent {{#stripe}}">
+        <tr class="{{#stripe}}">
             <td>{{#counter}}</td>
         </tr>
         {{/each}}
