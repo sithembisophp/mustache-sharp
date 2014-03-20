@@ -271,4 +271,4 @@ This should print:
 
     Hi John Doe. You are years old
     
-{{age}} is not defined, so it will be ommited. This is mainly why I forked the original repo: To be able to ignore errors when the key is undefined, instead of throwing errors.
+`{{age}}` is not defined, so it will be ommited. This is mainly why I forked the original repo: To be able to ignore errors when the key is undefined, instead of throwing errors.
