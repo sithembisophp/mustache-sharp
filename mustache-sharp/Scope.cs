@@ -77,7 +77,6 @@ namespace Mustache
         /// </summary>
         /// <param name="name">The name of the key.</param>
         /// <returns>The value associated with the key with the given name.</returns>
-        /// <exception cref="System.Collections.Generic.KeyNotFoundException">A key with the given name could not be found.</exception>
         internal object Find(string name)
         {
             SearchResults results = tryFind(name);
@@ -90,11 +89,14 @@ namespace Mustache
             {
                 return value;
             }
-            else {
+            else if (name == "this")
+            { 
+                return _source;
+            }
+            else
+            {
                 return "";
             }
-            //string message = String.Format(CultureInfo.CurrentCulture, Resources.KeyNotFound, results.Member);
-            //throw new KeyNotFoundException(message);
         }
 
         private object onKeyFound(string name, object value)
