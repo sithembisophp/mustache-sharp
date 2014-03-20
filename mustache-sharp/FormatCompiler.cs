@@ -43,6 +43,8 @@ namespace Mustache
             _tagLookup.Add(setDefinition.Name, setDefinition);
             StripeTagDefinition stripeDefinition = new StripeTagDefinition();
             _tagLookup.Add(stripeDefinition.Name, stripeDefinition);
+            CounterTagDefinition currentDefinition = new CounterTagDefinition();
+            _tagLookup.Add(currentDefinition.Name, currentDefinition);
         }
 
         /// <summary>
