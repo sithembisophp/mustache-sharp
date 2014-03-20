@@ -5,7 +5,8 @@ using System.IO;
 namespace Mustache
 {
     /// <summary>
-    /// Defines a tag that outputs the current index within an each loop.
+    /// Prints out odd / even based on the value of the index value
+    /// Usefull for CSS styling
     /// </summary>
     internal sealed class StripeTagDefinition : InlineTagDefinition
     {
